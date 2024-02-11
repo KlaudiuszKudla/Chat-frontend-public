@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import {
+  ChangeUserDataForm,
   LoginForm,
   PasswdRecoveryForm,
   PasswordsForm,
   RegisterForm,
 } from '../models/forms.model';
 import { equivalentValidator } from '../../shared/validators/equivalent.validator';
+import { ChangeUserData } from '../models/responseModel';
 
 @Injectable({
   providedIn: 'root',
@@ -96,6 +98,13 @@ export class FormService {
         ],
         nonNullable: true,
       }),
+    });
+  }
+
+  initChangeUserDataForm(): FormGroup<ChangeUserDataForm> {
+    return new FormGroup({
+      login: new FormControl<string | null>(''),
+      password: new FormControl<string | null>(''),
     });
   }
 

@@ -53,3 +53,21 @@
 .user-list li button:hover {
   background-color: #215b88;
 }
+
+.user-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}
+
+.user-info {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.user-image img {
+  max-width: 100px; /* Dostosuj szerokość obrazu do własnych potrzeb */
+  max-height: 100px; /* Dostosuj wysokość obrazu do własnych potrzeb */
+}

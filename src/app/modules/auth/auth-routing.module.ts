@@ -6,6 +6,7 @@ import { AccountActivationComponent } from './components/account-activation/acco
 import { PasswordRecoveryComponent } from './components/password-recovery/password-recovery.component';
 import { PasswordRecoveryFormComponent } from './components/password-recovery-form/password-recovery-form.component';
 import { UnauthGuard } from './guards/unauth.guard';
+import { ChangeUserDataComponent } from './components/change-user-data/change-user-data.component';
 
 const routes: Routes = [
   { path: 'logowanie', component: LoginComponent, canActivate: [UnauthGuard] },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'aktywuj/:uid', component: AccountActivationComponent },
   { path: 'odzyskaj-haslo', component: PasswordRecoveryComponent },
   { path: 'odzyskaj-haslo/:uid', component: PasswordRecoveryFormComponent },
+  { path: 'profil', component: ChangeUserDataComponent },
 ];
 
 @NgModule({

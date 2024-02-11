@@ -26,6 +26,9 @@
         <li class='nav-item'>
           <a class="nav-link" aria-current="page" routerLink='chats/friendSentRequest'>Wysłane zaproszenia</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" routerLink="profil">Profil</a>
+        </li>
         <ng-container *ngIf='user$ | async; else notUser'>
           <li class='nav-item'>
             <button mat-raised-button color='primary' (click)='logout()'>Wyloguj się</button>

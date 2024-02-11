@@ -9,6 +9,7 @@ import {
   LoginData,
   RegisterData,
   ResetPasswordData,
+  ChangeUserData,
 } from '../models/responseModel';
 import { Observable } from 'rxjs';
 
@@ -62,6 +63,19 @@ export class AuthService {
     return this.http.patch<ResponseModel>(
       `${this.apiUrl}/reset-password`,
       body,
+      {
+        withCredentials: true,
+      },
+    );
+  }
+
+  changeUserData(body: ChangeUserData): Observable<ResponseModel> {
+    return this.http.patch<ResponseModel>(
+      `${this.apiUrl}/change-user-data}`,
+      body,
+      {
+        withCredentials: true,
+      },
     );
   }
 }

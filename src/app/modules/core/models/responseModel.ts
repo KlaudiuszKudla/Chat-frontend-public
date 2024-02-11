@@ -18,6 +18,7 @@ export interface ChatUser {
   email: string;
   login: string;
   id: string;
+  imageUrl: string;
 }
 
 export interface LoginData {
@@ -38,6 +39,13 @@ export interface RegisterData {
   email: string;
   login: string;
   password: string;
+}
+
+export interface ChangeUserData {
+  login: string | null;
+  password: string | null;
+  id: string | null;
+  imageUrl: string | null;
 }
 
 export interface ResponseModel {

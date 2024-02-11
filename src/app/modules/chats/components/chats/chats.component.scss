@@ -11,9 +11,16 @@ body {
 }
 
 #videos {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+#user-2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-width: 150px; /* Adjust the size as needed */
 }
 
 .video-player {
